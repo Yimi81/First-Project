@@ -3,14 +3,14 @@ import Router from 'vue-router'
 import Login from '@/components/Login'
 import HelloWorld from '@/components/HelloWorld'
 import Register from '@/components/Register'
+import main from '@/components/main'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+        path:'/',
+        redirect:'/Login'
     },
     {
       path: '/Login',
@@ -21,6 +21,11 @@ export default new Router({
       path:'/Register',
       name: 'Register',
       component: Register
+    },
+    {
+      path:'/main',
+      name: 'main',
+      component: main
     }
 
   ]
